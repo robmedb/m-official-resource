@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雷速 — 资料整理与信息索引</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background-color: #fafaf9;
+            color: #1c1917;
+            line-height: 1.7;
+            letter-spacing: 0.01em;
+        }
+
+        .container {
+            max-width: 740px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ---- Hero ---- */
+        .hero {
+            padding: 100px 0 60px;
+            border-bottom: 1px solid #e7e5e4;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            color: #0c0a09;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+
+        .hero .sub {
+            font-size: 1.05rem;
+            color: #57534e;
+            max-width: 600px;
+            margin-bottom: 32px;
+        }
+
+        .hero .tagline {
+            display: inline-block;
+            background: #e7e5e4;
+            color: #292524;
+            padding: 6px 16px;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            font-weight: 450;
+            letter-spacing: 0.3px;
+        }
+
+        /* ---- section general ---- */
+        section {
+            padding: 64px 0;
+            border-bottom: 1px solid #e7e5e4;
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            color: #0c0a09;
+            margin-bottom: 24px;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #1c1917;
+            margin-bottom: 8px;
+        }
+
+        p, li {
+            color: #44403c;
+            font-size: 0.97rem;
+        }
+
+        p + p {
+            margin-top: 16px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 12px;
+        }
+
+        ul li {
+            padding-left: 22px;
+            position: relative;
+            margin-bottom: 12px;
+        }
+
+        ul li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: #a8a29e;
+            font-weight: 300;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            margin-top: 8px;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 28px 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+            border: 1px solid #e7e5e4;
+        }
+
+        .card p {
+            font-size: 0.92rem;
+        }
+
+        /* ---- FAQ summary ---- */
+        .faq-item {
+            padding: 20px 0;
+            border-bottom: 1px solid #f0efed;
+        }
+
+        .faq-item:first-child {
+            padding-top: 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-q {
+            font-weight: 500;
+            font-size: 1rem;
+            color: #1c1917;
+            margin-bottom: 6px;
+        }
+
+        .faq-a {
+            color: #57534e;
+            font-size: 0.92rem;
+            line-height: 1.65;
+        }
+
+        /* ---- bottom link ---- */
+        .footer-links {
+            padding: 48px 0 64px;
+            text-align: left;
+        }
+
+        .footer-links p {
+            font-size: 0.9rem;
+            color: #78716c;
+        }
+
+        .footer-links a {
+            color: #1c1917;
+            text-decoration: none;
+            border-bottom: 1px solid #d6d3d1;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .footer-links a:hover {
+            border-bottom-color: #1c1917;
+            color: #0c0a09;
+        }
+
+        .inline-link {
+            color: #1c1917;
+            text-decoration: none;
+            border-bottom: 1px solid #d6d3d1;
+            transition: border-color 0.2s;
+        }
+
+        .inline-link:hover {
+            border-bottom-color: #1c1917;
+        }
+
+        /* ---- responsive ---- */
+        @media (max-width: 640px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero {
+                padding: 60px 0 40px;
+            }
+
+            section {
+                padding: 40px 0;
+            }
+
+            .grid-2 {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .container {
+                padding: 0 20px;
+            }
+
+            .card {
+                padding: 20px 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Hero -->
+        <header class="hero">
+            <span class="tagline">信息索引 · 生活化整理</span>
+            <h1>资料·笔记·索引<br>用 <a href="https://m-official-leisu.com" class="inline-link">雷速</a> 的方式重新梳理</h1>
+            <div class="sub">
+                比起追逐即时资讯，更在意如何把零散的内容归拢成可回溯的结构。雷速不只是一个工具名称，也是一种整理习惯——从网页书签到项目笔记，从兴趣收集到日常记录。
+            </div>
+        </header>
+
+        <!-- 优势区 / 为什么这样整理 -->
+        <section>
+            <h2>为什么用这样的方式整理</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>减少查找成本</h3>
+                    <p>日常接触的信息早已超出大脑即时处理范围。把条目、链接、片段按主题归类，比每次临时搜索更省力。雷速提供的索引思路，就是帮你把“常用”和“可能有用”放在顺手的位置。</p>
+                </div>
+                <div class="card">
+                    <h3>保持内容呼吸感</h3>
+                    <p>不追求大而全的数据库，而是像手边笔记本一样自然。一条记录、一句话备注、一个外链，都允许存在。整理不该是负担，而是对注意力的温和管理。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 说明区 / 资料整理的实际场景 -->
+        <section>
+            <h2>哪些场景用得上</h2>
+            <p>不管是做项目调研、收藏实用网站，还是记录个人学习路径，信息一旦积累就需要一个清晰的落脚点。雷速的方向，适合那些希望把资料整理成“可翻阅、可跳转、可更新”状态的人。</p>
+            <ul>
+                <li>整理工作流中反复参考的工具文档与手册页面</li>
+                <li>收集兴趣领域（设计、编程、写作）里的好文章和灵感片段</li>
+                <li>建立自己的小索引库：食谱、书单、旅行备忘、播客笔记</li>
+                <li>把零散的浏览器书签变成有注释、有分类的活页夹</li>
+            </ul>
+            <p style="margin-top: 20px;">不需要完美的分类法，只要一个能让自己快速定位的系统。雷速在这个方向上提供了一种轻量的容器思路。</p>
+        </section>
+
+        <!-- FAQ 摘要 -->
+        <section>
+            <h2>常见疑问摘要</h2>
+            <div class="faq-item">
+                <div class="faq-q">这是某种笔记软件或在线服务吗？</div>
+                <div class="faq-a">可以这么理解，但不完全是。雷速更接近一种信息整理与索引的框架，<a href="https://m-official-leisu.com" class="inline-link">雷速</a> 本身代表了这套思路在线上的一种呈现。你可以按自己的节奏使用，不必被复杂的分类规则束缚。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">资料规模大了之后会不会难维护？</div>
+                <div class="faq-a">任何整理方式都需要偶尔回顾。雷速的建议是：定期（比如每周或每月）花十分钟扫一眼索引，删除不再需要的条目，调整一下分组。保持小规模反而比硬撑大框架更可持续。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">是否适合团队协作？</div>
+                <div class="faq-a">目前更偏向个人或小团体的信息组织场景。如果你习惯自己维护一套知识索引，或者和几位朋友共享一个整理空间，雷速的风格会挺契合。</div>
+            </div>
+        </section>
+
+        <!-- 底部链接 -->
+        <div class="footer-links">
+            <p>
+                如果你也喜欢轻量、可翻阅的资料整理方式，可以了解一下 
+                <a href="https://m-official-leisu.com">雷速</a>。
+                这里没有复杂的承诺，只有关于信息索引与日常笔记的一种实用取向。
+            </p>
+            <p style="margin-top: 20px; color: #a8a29e; font-size: 0.8rem;">
+                记录 · 索引 · 重新找到
+            </p>
+        </div>
+    </div>
+</body>
+</html>
